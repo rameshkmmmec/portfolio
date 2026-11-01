@@ -135,6 +135,11 @@
       background: rgba(6, 182, 212, 0.08);
     }
 
+    .btn-resume-highlight:hover {
+      background: rgba(6, 182, 212, 0.18);
+      border-color: var(--cyan);
+    }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -253,7 +258,7 @@
       font-family: 'JetBrains Mono', monospace;
     }
 
-    /* Profile Photo Card Styling */
+    /* Profile Photo Card */
     .profile-card-container {
       position: relative;
       display: flex;
@@ -289,7 +294,6 @@
       display: block;
     }
 
-    /* Floating Pill Badge */
     .floating-badge {
       position: absolute;
       bottom: -15px;
@@ -367,6 +371,107 @@
       letter-spacing: -0.02em;
     }
 
+    /* About Section Styling */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text strong {
+      color: #fff;
+    }
+
+    .about-quote {
+      border-left: 3px solid var(--cyan);
+      padding-left: 1.25rem;
+      margin-top: 1.5rem;
+      font-style: italic;
+      color: #cbd5e1;
+      font-size: 1.05rem;
+    }
+
+    .quick-facts {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .quick-facts h3 {
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .fact-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 0.9rem;
+    }
+
+    .fact-row:last-child {
+      border-bottom: none;
+    }
+
+    .fact-row dt {
+      color: var(--text-muted);
+    }
+
+    .fact-row dd {
+      font-weight: 600;
+      color: #fff;
+      text-align: right;
+    }
+
+    /* Pillars Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .pillar-card {
+      background: rgba(16, 24, 40, 0.5);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: all 0.2s ease;
+    }
+
+    .pillar-card:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .pillar-card h4 {
+      font-size: 1.15rem;
+      margin-bottom: 0.65rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pillar-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Timeline */
     .timeline {
       display: flex;
       flex-direction: column;
@@ -527,7 +632,7 @@
     }
 
     @media (max-width: 900px) {
-      .hero {
+      .hero, .about-layout {
         grid-template-columns: 1fr;
         padding-top: 2rem;
       }
@@ -549,6 +654,7 @@
         <span>Ramesh Kumar</span>
       </a>
       <nav>
+        <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Work</a>
         <a href="#contact">Contact</a>
@@ -643,10 +749,82 @@
       </div>
     </div>
 
-    <!-- Experience Timeline -->
+    <!-- Section 01: About -->
+    <section class="container" id="about">
+      <div class="section-header">
+        <p class="section-label">01 / Profile</p>
+        <h2 class="section-title">Engineering with Craft & Scale</h2>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-text">
+          <p>
+            I am a senior iOS engineer and technical team lead with <strong>over 9 years</strong> of dedicated hands-on experience building, architecting, and deploying native iOS applications across massive-scale travel and consumer platforms.
+          </p>
+          <p>
+            Most recently, as Senior Software Engineer and iOS Team Lead at <strong>EaseMyTrip</strong>, I led engineering efforts for high-traffic flight, hotel, and bus booking ecosystems serving millions of monthly active users. My work focuses on modernizing codebases with <strong>SwiftUI, Combine, and async/await</strong>, driving modular architecture, and enforcing memory profiling to maintain an industry-standard <strong>99.8%+ crash-free rate</strong>.
+          </p>
+          <p class="about-quote">
+            "High-impact mobile apps are built where robust architecture meets buttery-smooth frame rates and meticulous UI craftsmanship."
+          </p>
+        </div>
+
+        <aside class="quick-facts">
+          <h3>Snapshot</h3>
+          <dl>
+            <div class="fact-row">
+              <dt>Role</dt>
+              <dd>Senior iOS Engineer / Lead</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Experience</dt>
+              <dd>9+ Years</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Education</dt>
+              <dd>B.Tech CSE (MMMEC Gorakhpur)</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Core Tech</dt>
+              <dd>SwiftUI · Swift 6 · Combine</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Location</dt>
+              <dd>Noida / UP, India</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Status</dt>
+              <dd style="color: var(--cyan);">Open to Opportunities</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+
+      <!-- Pillars / Core Competencies -->
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <h4>⚡ Architecture at Scale</h4>
+          <p>Designing modular codebases with MVVM-C and VIPER, decoupling layers for faster feature delivery and zero regression.</p>
+        </div>
+        <div class="pillar-card">
+          <h4>🛡 Performance & Memory</h4>
+          <p>Instruments-led profiling for zero retain cycles, memory leak eradication, and steady 60/120 FPS UI rendering.</p>
+        </div>
+        <div class="pillar-card">
+          <h4>🔄 Modern Concurrency</h4>
+          <p>Leveraging async/await, Tasks, Actors, and Combine for safe and responsive multi-threaded background pipelines.</p>
+        </div>
+        <div class="pillar-card">
+          <h4>👥 Team Mentorship</h4>
+          <p>Code reviews, architectural guidelines, CI/CD automation, and guiding engineering teams to consistent App Store releases.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02: Experience -->
     <section class="container" id="experience">
       <div class="section-header">
-        <p class="section-label">01 / Career</p>
+        <p class="section-label">02 / Career</p>
         <h2 class="section-title">Work Experience</h2>
       </div>
 
@@ -725,10 +903,10 @@
       </div>
     </section>
 
-    <!-- Selected Projects -->
+    <!-- Section 03: Projects -->
     <section class="container" id="projects">
       <div class="section-header">
-        <p class="section-label">02 / Portfolio</p>
+        <p class="section-label">03 / Portfolio</p>
         <h2 class="section-title">Key Projects & Highlights</h2>
       </div>
 
@@ -771,7 +949,7 @@
       </div>
     </section>
 
-    <!-- Contact Box -->
+    <!-- Contact Section -->
     <section class="container" id="contact">
       <div class="contact-box">
         <h2>Let's build something remarkable.</h2>
