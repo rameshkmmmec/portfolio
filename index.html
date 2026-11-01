@@ -15,6 +15,8 @@
       --card-border: rgba(255, 255, 255, 0.08);
       --card-hover: rgba(255, 255, 255, 0.14);
       --cyan: #06b6d4;
+      --teal-glow: rgba(45, 212, 191, 0.35);
+      --teal-border: rgba(45, 212, 191, 0.45);
       --indigo: #6366f1;
       --text: #f8fafc;
       --text-muted: #94a3b8;
@@ -258,7 +260,9 @@
       font-family: 'JetBrains Mono', monospace;
     }
 
-    /* Profile Photo Card */
+    /* ----------------------------------------------------
+       HERO PROFILE CARD & GLOWING FRAME (MATCHING SCREENSHOT)
+       ---------------------------------------------------- */
     .profile-card-container {
       position: relative;
       display: flex;
@@ -266,24 +270,43 @@
       align-items: center;
     }
 
+    .profile-frame-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    /* Translucent outer border layer behind the card */
+    .profile-outer-ring {
+      position: absolute;
+      inset: -14px;
+      border-radius: 40px;
+      border: 1.5px solid rgba(45, 212, 191, 0.35);
+      background: rgba(15, 23, 42, 0.2);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Main card container */
     .profile-card {
       position: relative;
       width: 100%;
-      max-width: 380px;
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 1rem;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(20px);
+      height: 460px;
+      background: rgba(13, 20, 36, 0.9);
+      border: 1.5px solid var(--teal-border);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 
+        0 0 35px var(--teal-glow),
+        0 25px 50px rgba(0, 0, 0, 0.8);
+      z-index: 2;
     }
 
     .profile-img-wrap {
       width: 100%;
-      height: 420px;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      height: 100%;
       position: relative;
     }
 
@@ -294,29 +317,89 @@
       display: block;
     }
 
-    .floating-badge {
+    /* Vignette & bottom dark overlay */
+    .profile-card::after {
+      content: "";
       position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid var(--cyan);
-      box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
-      padding: 0.6rem 1.25rem;
-      border-radius: 50px;
-      white-space: nowrap;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(7, 11, 20, 0.1) 40%,
+        rgba(7, 11, 20, 0.75) 80%,
+        rgba(7, 11, 20, 0.95) 100%
+      );
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Role info inside the card footer */
+    .card-footer-info {
+      position: absolute;
+      bottom: 22px;
+      left: 22px;
+      right: 22px;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .card-role-title {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #2dd4bf;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .card-role-sub {
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+
+    /* Floating Pill Badges around frame */
+    .floating-pill {
+      position: absolute;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 0.45rem 0.95rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #f1f5f9;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.45rem;
+      z-index: 4;
+      white-space: nowrap;
     }
 
-    .floating-badge span {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #fff;
+    .pill-top-left {
+      top: -12px;
+      left: -18px;
     }
 
-    /* Infinite Marquee */
+    .pill-mid-right {
+      top: 36%;
+      right: -25px;
+    }
+
+    .pill-bottom-left {
+      bottom: 65px;
+      left: -24px;
+    }
+
+    .swift-icon {
+      width: 14px;
+      height: 14px;
+      background: #f05138;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* Marquee */
     .marquee-wrap {
       border-top: 1px solid var(--card-border);
       border-bottom: 1px solid var(--card-border);
@@ -639,6 +722,15 @@
       .stats-row {
         grid-template-columns: repeat(2, 1fr);
       }
+      .floating-pill {
+        display: none;
+      }
+      .profile-frame-wrap {
+        max-width: 320px;
+      }
+      .profile-card {
+        height: 400px;
+      }
     }
   </style>
 </head>
@@ -715,16 +807,37 @@
         </dl>
       </div>
 
-      <!-- Right Side Profile Photo Card -->
+      <!-- Right Side Profile Photo Card (Glowing Frame + Floating Badges) -->
       <div class="profile-card-container">
-        <div class="profile-card">
-          <div class="profile-img-wrap">
-            <img src="profile.png" alt="Ramesh Kumar - Senior iOS Engineer">
+        <div class="profile-frame-wrap">
+          
+          <!-- Outer translucent glowing border -->
+          <div class="profile-outer-ring"></div>
+
+          <!-- Floating Badges like reference UI -->
+          <div class="floating-pill pill-top-left">
+            <span class="swift-icon"></span> Swift 6
           </div>
-          <div class="floating-badge">
-            <span class="status-dot"></span>
-            <span>Senior iOS Lead · Swift / SwiftUI</span>
+          <div class="floating-pill pill-mid-right">
+            <span>⚡</span> SwiftUI
           </div>
+          <div class="floating-pill pill-bottom-left">
+            <span>🛡️</span> VIPER / Clean Core
+          </div>
+
+          <!-- Main Card -->
+          <div class="profile-card">
+            <div class="profile-img-wrap">
+              <img src="profile.png" alt="Ramesh Kumar - Senior iOS Engineer">
+            </div>
+
+            <!-- Role details overlay inside bottom of photo -->
+            <div class="card-footer-info">
+              <div class="card-role-title">SENIOR IOS ENGINEER</div>
+              <div class="card-role-sub">Travel Tech • FinTech • Architecture</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
