@@ -135,11 +135,6 @@
       background: rgba(6, 182, 212, 0.08);
     }
 
-    .btn-resume-highlight:hover {
-      background: rgba(6, 182, 212, 0.18);
-      border-color: var(--cyan);
-    }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -151,7 +146,7 @@
     .hero {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 3rem;
+      gap: 3.5rem;
       align-items: center;
       min-height: calc(85vh - 70px);
     }
@@ -258,55 +253,66 @@
       font-family: 'JetBrains Mono', monospace;
     }
 
-    .terminal-card {
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-      overflow: hidden;
+    /* Profile Photo Card Styling */
+    .profile-card-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .terminal-header {
-      background: rgba(255, 255, 255, 0.04);
-      padding: 0.85rem 1.25rem;
+    .profile-card {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 1rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(20px);
+    }
+
+    .profile-img-wrap {
+      width: 100%;
+      height: 420px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    .profile-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Floating Pill Badge */
+    .floating-badge {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid var(--cyan);
+      box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
+      padding: 0.6rem 1.25rem;
+      border-radius: 50px;
+      white-space: nowrap;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      border-bottom: 1px solid var(--card-border);
+      gap: 0.6rem;
     }
 
-    .terminal-dot {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-    }
-
-    .dot-red { background: #ef4444; }
-    .dot-yellow { background: #f59e0b; }
-    .dot-green { background: #10b981; }
-
-    .terminal-title {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-left: auto;
-    }
-
-    .terminal-body {
-      padding: 1.5rem;
-      font-family: 'JetBrains Mono', monospace;
+    .floating-badge span {
       font-size: 0.85rem;
-      color: #cbd5e1;
-      line-height: 1.7;
+      font-weight: 600;
+      color: #fff;
     }
 
-    .kw { color: #f43f5e; font-weight: 600; }
-    .type { color: #38bdf8; }
-    .str { color: #34d399; }
-    .prop { color: #fbbf24; }
-    .comment { color: #64748b; font-style: italic; }
-
+    /* Infinite Marquee */
     .marquee-wrap {
       border-top: 1px solid var(--card-border);
       border-bottom: 1px solid var(--card-border);
@@ -535,6 +541,7 @@
 
   <div class="ambient-glow"></div>
 
+  <!-- Header -->
   <header>
     <div class="nav-container">
       <a href="#top" class="logo">
@@ -556,6 +563,7 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="container hero" id="top">
       <div>
         <div class="status-badge">
@@ -601,28 +609,21 @@
         </dl>
       </div>
 
-      <div class="terminal-card">
-        <div class="terminal-header">
-          <span class="terminal-dot dot-red"></span>
-          <span class="terminal-dot dot-yellow"></span>
-          <span class="terminal-dot dot-green"></span>
-          <span class="terminal-title">RameshProfile.swift</span>
-        </div>
-        <div class="terminal-body">
-          <span class="kw">struct</span> <span class="type">iOSLeadEngineer</span> {<br>
-          &nbsp;&nbsp;<span class="kw">let</span> <span class="prop">name</span>: <span class="type">String</span> = <span class="str">"Ramesh Kumar"</span><br>
-          &nbsp;&nbsp;<span class="kw">let</span> <span class="prop">almaMater</span> = <span class="str">"MMMEC Gorakhpur (B.Tech CSE)"</span><br>
-          &nbsp;&nbsp;<span class="kw">let</span> <span class="prop">primaryStack</span>: [<span class="type">String</span>] = [<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Swift"</span>, <span class="str">"SwiftUI"</span>, <span class="str">"Combine"</span>,<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"UIKit"</span>, <span class="str">"Concurrency"</span>, <span class="str">"MVVM-C"</span><br>
-          &nbsp;&nbsp;]<br>
-          &nbsp;&nbsp;<span class="kw">var</span> <span class="prop">leadership</span>: <span class="type">Bool</span> = <span class="kw">true</span><br>
-          &nbsp;&nbsp;<span class="comment">// Delivering pixel-perfect, scalable iOS apps</span><br>
-          }
+      <!-- Right Side Profile Photo Card -->
+      <div class="profile-card-container">
+        <div class="profile-card">
+          <div class="profile-img-wrap">
+            <img src="profile.png" alt="Ramesh Kumar - Senior iOS Engineer">
+          </div>
+          <div class="floating-badge">
+            <span class="status-dot"></span>
+            <span>Senior iOS Lead · Swift / SwiftUI</span>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Infinite Tech Marquee -->
     <div class="marquee-wrap">
       <div class="marquee-track">
         <span class="marquee-item">Swift 6</span>
@@ -642,6 +643,7 @@
       </div>
     </div>
 
+    <!-- Experience Timeline -->
     <section class="container" id="experience">
       <div class="section-header">
         <p class="section-label">01 / Career</p>
@@ -649,6 +651,7 @@
       </div>
 
       <div class="timeline">
+        <!-- EaseMyTrip -->
         <div class="timeline-card">
           <div class="timeline-head">
             <div>
@@ -674,6 +677,7 @@
           </div>
         </div>
 
+        <!-- Tycho Technologies -->
         <div class="timeline-card">
           <div class="timeline-head">
             <div>
@@ -697,6 +701,7 @@
           </div>
         </div>
 
+        <!-- Limitless Mobility -->
         <div class="timeline-card">
           <div class="timeline-head">
             <div>
@@ -720,6 +725,7 @@
       </div>
     </section>
 
+    <!-- Selected Projects -->
     <section class="container" id="projects">
       <div class="section-header">
         <p class="section-label">02 / Portfolio</p>
@@ -765,6 +771,7 @@
       </div>
     </section>
 
+    <!-- Contact Box -->
     <section class="container" id="contact">
       <div class="contact-box">
         <h2>Let's build something remarkable.</h2>
