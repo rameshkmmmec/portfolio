@@ -18,7 +18,6 @@
       --indigo: #6366f1;
       --text: #f8fafc;
       --text-muted: #94a3b8;
-      --glow: rgba(6, 182, 212, 0.15);
     }
 
     * {
@@ -504,4 +503,280 @@
 
     .contact-box h2 {
       font-size: 2.25rem;
-      margin-bottom:
+      margin-bottom: 1rem;
+    }
+
+    .contact-box p {
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 2rem;
+      }
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <header>
+    <div class="nav-container">
+      <a href="#top" class="logo">
+        <span class="logo-badge">RK</span>
+        <span>Ramesh Kumar</span>
+      </a>
+      <nav>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="Ramesh_Kumar_Resume.pdf" download="Ramesh_Kumar_Resume.pdf" class="btn-resume btn-resume-highlight">
+          <span>📄</span> Resume
+        </a>
+        <a href="mailto:rameshkmmmec@gmail.com" class="btn-resume">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero" id="top">
+      <div>
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Open to Senior iOS & Lead Opportunities
+        </div>
+
+        <h1>Hi, I'm <span>Ramesh</span> Kumar.</h1>
+
+        <div class="code-pill">
+          let role = "Senior iOS Software Engineer & Tech Lead";
+        </div>
+
+        <p class="lead">
+          Over <strong>9+ years</strong> designing and shipping high-performance, high-concurrency native iOS applications. Specializing in Swift, SwiftUI, Combine, and scalable MVVM/VIPER travel & consumer platforms.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#experience" class="btn-primary">View Career Experience</a>
+          <a href="Ramesh_Kumar_Resume.pdf" download="Ramesh_Kumar_Resume.pdf" class="btn-resume btn-resume-highlight" style="padding: 0.75rem 1.4rem; font-size: 0.95rem;">
+            <span>⬇</span> Download Resume
+          </a>
+          <a href="mailto:rameshkmmmec@gmail.com" class="btn-resume" style="padding: 0.75rem 1.4rem; font-size: 0.95rem;">Contact Me</a>
+        </div>
+
+        <dl class="stats-row">
+          <div class="stat-item">
+            <dt>Experience</dt>
+            <dd>9+ <span style="font-size: 1rem; color: var(--cyan);">YRS</span></dd>
+          </div>
+          <div class="stat-item">
+            <dt>Users Reached</dt>
+            <dd>10M+ <span style="font-size: 1rem; color: var(--cyan);">APPS</span></dd>
+          </div>
+          <div class="stat-item">
+            <dt>Crash-Free Rate</dt>
+            <dd>99.8%</dd>
+          </div>
+          <div class="stat-item">
+            <dt>Codebase</dt>
+            <dd>Swift 6</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <span class="terminal-dot dot-red"></span>
+          <span class="terminal-dot dot-yellow"></span>
+          <span class="terminal-dot dot-green"></span>
+          <span class="terminal-title">RameshProfile.swift</span>
+        </div>
+        <div class="terminal-body">
+          <span class="kw">struct</span> <span class="type">iOSLeadEngineer</span> {<br>
+          &nbsp;&nbsp;<span class="kw">let</span> <span class="prop">name</span>: <span class="type">String</span> = <span class="str">"Ramesh Kumar"</span><br>
+          &nbsp;&nbsp;<span class="kw">let</span> <span class="prop">almaMater</span> = <span class="str">"MMMEC Gorakhpur (B.Tech CSE)"</span><br>
+          &nbsp;&nbsp;<span class="kw">let</span> <span class="prop">primaryStack</span>: [<span class="type">String</span>] = [<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Swift"</span>, <span class="str">"SwiftUI"</span>, <span class="str">"Combine"</span>,<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"UIKit"</span>, <span class="str">"Concurrency"</span>, <span class="str">"MVVM-C"</span><br>
+          &nbsp;&nbsp;]<br>
+          &nbsp;&nbsp;<span class="kw">var</span> <span class="prop">leadership</span>: <span class="type">Bool</span> = <span class="kw">true</span><br>
+          &nbsp;&nbsp;<span class="comment">// Delivering pixel-perfect, scalable iOS apps</span><br>
+          }
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span class="marquee-item">Swift 6</span>
+        <span class="marquee-item">SwiftUI</span>
+        <span class="marquee-item">UIKit</span>
+        <span class="marquee-item">Combine</span>
+        <span class="marquee-item">Swift Concurrency</span>
+        <span class="marquee-item">MVVM-C & VIPER</span>
+        <span class="marquee-item">Memory Optimization</span>
+        <span class="marquee-item">Instruments & CI/CD</span>
+        <span class="marquee-item">CoreData</span>
+        <span class="marquee-item">Swift 6</span>
+        <span class="marquee-item">SwiftUI</span>
+        <span class="marquee-item">UIKit</span>
+        <span class="marquee-item">Combine</span>
+        <span class="marquee-item">Swift Concurrency</span>
+      </div>
+    </div>
+
+    <section class="container" id="experience">
+      <div class="section-header">
+        <p class="section-label">01 / Career</p>
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <div>
+              <h3 class="role-title">Senior Software Engineer & iOS Team Lead</h3>
+              <p class="company-sub">Easy Trip Planners Ltd. (EaseMyTrip) · Noida, India</p>
+            </div>
+            <span class="date-badge">Aug 2021 — Jul 2025</span>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Architected and scaled core travel booking flows for millions of active monthly users.</li>
+              <li>Led the native iOS engineering team, running design reviews and ensuring a 99.8%+ crash-free stability rate across all major App Store releases.</li>
+              <li>Headed modern SwiftUI & Combine modular refactoring, improving delivery velocity and eliminating memory bottlenecks via Instruments profiling.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tag">Swift</span>
+              <span class="tag">SwiftUI</span>
+              <span class="tag">Combine</span>
+              <span class="tag">MVVM</span>
+              <span class="tag">Performance Tuning</span>
+              <span class="tag">App Store Release</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <div>
+              <h3 class="role-title">Senior Software Engineer & Team Lead</h3>
+              <p class="company-sub">Tycho Technologies Private Limited · Noida, India</p>
+            </div>
+            <span class="date-badge">Aug 2016 — May 2021</span>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Headed iOS client architecture and team coordination across multiple concurrent consumer applications.</li>
+              <li>Implemented modular architecture and strict design patterns, reducing boilerplate code and regression defects by over 30%.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tag">Swift</span>
+              <span class="tag">Objective-C</span>
+              <span class="tag">UIKit</span>
+              <span class="tag">RESTful APIs</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <div>
+              <h3 class="role-title">Software Engineer (iOS)</h3>
+              <p class="company-sub">Limitless Mobility Solutions · Noida, India</p>
+            </div>
+            <span class="date-badge">Aug 2015 — Apr 2016</span>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Developed and deployed native iOS mobile apps using Objective-C and UIKit.</li>
+              <li>Integrated backend REST services with offline caching and responsive UI layouts.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tag">Objective-C</span>
+              <span class="tag">UIKit</span>
+              <span class="tag">JSON APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="projects">
+      <div class="section-header">
+        <p class="section-label">02 / Portfolio</p>
+        <h2 class="section-title">Key Projects & Highlights</h2>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div>
+            <h3>High-Scale Travel & Booking Engine</h3>
+            <p>End-to-end flight, hotel, and bus reservation pipeline designed for high-concurrency peak traffic periods with seamless payment gateway checkouts.</p>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">SwiftUI</span>
+            <span class="tag">Combine</span>
+            <span class="tag">Custom Modifiers</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>Enterprise Mobile Architecture</h3>
+            <p>Multi-module iOS framework decoupling business logic, network layers, and UI components for fast feature development across enterprise projects.</p>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">Swift Concurrency</span>
+            <span class="tag">SPM</span>
+            <span class="tag">Clean Architecture</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>Performance & Memory Profiling Suite</h3>
+            <p>Systematic audit workflow utilizing Xcode Instruments to diagnose memory leaks, eliminate main-thread hitches, and optimize app launch times.</p>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">Instruments</span>
+            <span class="tag">Memory Leaks</span>
+            <span class="tag">FPS Optimization</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="contact">
+      <div class="contact-box">
+        <h2>Let's build something remarkable.</h2>
+        <p>Currently open to discussing Senior iOS Engineer or Engineering Lead opportunities.</p>
+        <a href="mailto:rameshkmmmec@gmail.com" class="btn-primary">Email Ramesh</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Ramesh Kumar · Senior iOS Software Engineer · Built with HTML/CSS</p>
+  </footer>
+
+</body>
+</html>
