@@ -1,151 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ramesh Kumar — Senior iOS Engineer & Team Lead</title>
-<meta name="description" content="Ramesh Kumar is a senior iOS engineer with 9+ years of experience building high-traffic travel, e-commerce and fintech apps in Swift and SwiftUI.">
+<title>Ramesh Kumar — Senior iOS Engineer</title>
+<meta name="description" content="Ramesh Kumar is a senior iOS engineer and team lead with 9+ years of experience building high-traffic travel, e-commerce and fintech apps with Swift and SwiftUI.">
+<meta name="color-scheme" content="dark light">
 <style>
-:root{--bg:#f5f6fa;--surface:#fff;--ink:#0d1526;--muted:#55607a;--line:#d9deea;--accent:#c8650a;--accent-soft:#fde9d3;--sky:#1f5fd1;
+:root{--bg:#f4f6fb;--bg2:#e9edf6;--card:#fff;--ink:#0b1220;--mut:#566178;--line:#d6dcea;--acc:#2f6fe4;--acc2:#7a4de0;--glow:rgba(47,111,228,.14);
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1220;--surface:#111c30;--ink:#eaf0fb;--muted:#9aa8c4;--line:#22304d;--accent:#f5a43a;--accent-soft:#2a2113;--sky:#6aa8ff}}
-:root[data-theme="dark"]{--bg:#0a1220;--surface:#111c30;--ink:#eaf0fb;--muted:#9aa8c4;--line:#22304d;--accent:#f5a43a;--accent-soft:#2a2113;--sky:#6aa8ff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#04060b;--bg2:#0a0f1a;--card:#0d1422;--ink:#e8eefb;--mut:#93a1bd;--line:#1c2742;--acc:#5ea2ff;--acc2:#9a7bff;--glow:rgba(94,162,255,.16)}}
+:root[data-theme="dark"]{--bg:#04060b;--bg2:#0a0f1a;--card:#0d1422;--ink:#e8eefb;--mut:#93a1bd;--line:#1c2742;--acc:#5ea2ff;--acc2:#9a7bff;--glow:rgba(94,162,255,.16)}
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Iowan Old Style","Palatino Linotype",Georgia,serif}
-h1,h2,h3,.sans{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif}
-a{color:var(--sky)}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.wrap{max-width:960px;margin:0 auto;padding:0 22px}
-nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
-nav .wrap{display:flex;align-items:center;gap:18px;height:56px;overflow-x:auto}
-nav b{font:700 17px "Avenir Next","Segoe UI",sans-serif;margin-right:auto;white-space:nowrap}
-nav a{color:var(--muted);text-decoration:none;font:500 15px "Avenir Next","Segoe UI",sans-serif;white-space:nowrap}
-nav a:hover{color:var(--ink)}
-nav button{background:none;border:1px solid var(--line);color:var(--ink);border-radius:20px;padding:5px 12px;font:500 14px sans-serif;cursor:pointer}
-.hero{padding:72px 0 56px;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(40px,7vw,68px);line-height:1.04;margin:0 0 18px;letter-spacing:-.02em}
-.hero p{color:var(--muted);max-width:30em;margin:0 0 26px}
-.btn{display:inline-block;padding:12px 22px;border-radius:8px;font:600 16px "Avenir Next","Segoe UI",sans-serif;text-decoration:none;margin:0 10px 10px 0}
-.btn.p{background:var(--accent);color:#fff}.btn.s{border:1px solid var(--line);color:var(--ink)}
-.dark-btn-fix{color:#0a1220}
-.pass{background:var(--surface);border:1px solid var(--line);border-radius:14px;position:relative;overflow:hidden}
-.pass .top{background:var(--accent);color:#fff;padding:12px 20px;display:flex;justify-content:space-between;font:700 14px "Avenir Next","Segoe UI",sans-serif}
-.pass dl{margin:0;padding:18px 20px;display:grid;grid-template-columns:1fr 1fr;gap:16px 12px}
-.pass dt{font:500 13px "Avenir Next","Segoe UI",sans-serif;color:var(--muted)}
-.pass dd{margin:0;font:700 19px "Avenir Next","Segoe UI",sans-serif}
-.pass .stub{border-top:2px dashed var(--line);padding:14px 20px;font:500 14px "Avenir Next","Segoe UI",sans-serif;color:var(--muted)}
-section{padding:56px 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(28px,4vw,38px);margin:0 0 8px;letter-spacing:-.01em}
-.lead{color:var(--muted);margin:0 0 32px;max-width:36em}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
-.card h3{margin:0 0 6px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:16px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
-.tags li{background:var(--accent-soft);color:var(--ink);border-radius:6px;padding:3px 10px;font:500 14px "Avenir Next","Segoe UI",sans-serif}
-.job{display:grid;grid-template-columns:150px 1fr;gap:8px 28px;padding:26px 0;border-bottom:1px solid var(--line)}
-.job:last-child{border:0}
-.job time{font:600 15px "Avenir Next","Segoe UI",sans-serif;color:var(--accent)}
-.job h3{margin:0;font-size:20px}.job .co{color:var(--muted);margin:2px 0 10px;font-size:16px}
-.job ul{margin:0;padding-left:20px}.job li{margin-bottom:6px}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
-.skills h3{font-size:16px;margin:0 0 4px;color:var(--muted)}.skills .tags{margin-top:6px}
-footer{padding:40px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
-.contact a{font:600 20px "Avenir Next","Segoe UI",sans-serif;word-break:break-all}
-@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:44px}.job{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+a{color:var(--acc)}a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.w{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:9;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav .w{display:flex;align-items:center;gap:20px;height:60px;overflow-x:auto}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);text-decoration:none;margin-right:auto;white-space:nowrap}
+.logo i{font-style:normal;display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;font-size:13px}
+nav a.l{color:var(--mut);text-decoration:none;font-size:15px;white-space:nowrap}nav a.l:hover{color:var(--ink)}
+.btn{display:inline-block;padding:11px 20px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:none;cursor:pointer;font-size:15px;margin:0 8px 10px 0}
+.btn.p{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;border:0}
+nav .btn{margin:0;padding:7px 14px}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;padding:5px 14px;font-size:14px;color:var(--mut);background:var(--card)}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:#2fd18b}
+.hero{padding:64px 0 40px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;background:radial-gradient(600px 300px at 15% 0,var(--glow),transparent)}
+h1{font-size:clamp(40px,7vw,72px);line-height:1.04;letter-spacing:-.03em;margin:18px 0 12px}
+h1 span{background:linear-gradient(135deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.code{color:var(--mut);font-size:17px;margin:0 0 18px}.code b{color:var(--acc2);font-weight:400}.code em{color:var(--acc);font-style:normal}
+.hero p.d{color:var(--mut);max-width:34em;margin:0 0 24px}
+.soc{display:flex;gap:14px;flex-wrap:wrap;color:var(--mut);font-size:14px;margin-top:6px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:36px 0 0}
+.stats div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.stats b{display:block;font-size:30px;letter-spacing:-.02em}.stats span{color:var(--mut);font-size:14px}
+.pcard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 0 60px var(--glow)}
+.avatar{aspect-ratio:1;border-radius:16px;display:grid;place-items:center;font-size:84px;font-weight:800;letter-spacing:-.04em;color:#fff;background:linear-gradient(135deg,var(--acc),var(--acc2))}
+.pcard h3{margin:16px 0 2px;font-size:19px}.pcard p{margin:0;color:var(--mut);font-size:14px}
+.chip{position:absolute;background:var(--bg2);border:1px solid var(--line);border-radius:9px;padding:5px 12px;font-size:13px;font-weight:600}
+.cur{margin-top:16px;border:1px dashed var(--line);border-radius:12px;padding:12px 14px;font-size:14px}.cur small{color:var(--mut);display:block}
+.mq{overflow:hidden;border-block:1px solid var(--line);background:var(--bg2);padding:14px 0;white-space:nowrap;color:var(--mut)}
+.mq div{display:inline-block;animation:mq 32s linear infinite}.mq span{margin:0 18px}.mq i{font-style:normal;color:var(--acc)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:72px 0}
+.sh{margin-bottom:34px}.sh small{color:var(--acc);font-size:14px;letter-spacing:.04em}.sh h2{font-size:clamp(28px,4.4vw,42px);margin:4px 0 8px;letter-spacing:-.02em}.sh p{color:var(--mut);margin:0;max-width:38em}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--mut);font-size:15px}
+.ab{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;margin-bottom:28px}
+blockquote{margin:18px 0 0;padding-left:16px;border-left:3px solid var(--acc);color:var(--mut);font-style:italic}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}.facts div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}.facts small{display:block;color:var(--mut);font-size:13px}.facts b{font-size:15px}
+.tl{list-style:none;margin:0;padding:0 0 0 26px;border-left:2px solid var(--line)}
+.tl>li{position:relative;padding:0 0 30px}.tl>li::before{content:"";position:absolute;left:-34px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--acc);border:3px solid var(--bg)}
+.tl h3{margin:0;font-size:20px}.tl .co{color:var(--mut);margin:2px 0}.tl time{color:var(--acc);font-size:14px;font-weight:600}
+.tl ul.b{margin:10px 0;padding-left:20px;color:var(--mut)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;padding:0;list-style:none}.tags li{background:var(--bg2);border:1px solid var(--line);border-radius:7px;padding:3px 10px;font-size:13px}
+.fl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}.fl button{background:var(--card);border:1px solid var(--line);color:var(--mut);border-radius:30px;padding:7px 16px;cursor:pointer;font-size:14px}.fl button[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
+.cat{font-size:13px;color:var(--acc2);font-weight:600}
+.os{display:grid;grid-template-columns:1fr 1.6fr;gap:22px}
+.gh{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}.gh .avatar{width:64px;font-size:24px;border-radius:50%}
+.gn{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.gn div{background:var(--bg2);border-radius:10px;padding:10px}.gn b{font-size:22px;display:block}.gn span{color:var(--mut);font-size:13px}
+.bars div{margin-bottom:14px}.bars p{display:flex;justify-content:space-between;margin:0 0 5px;font-size:15px}.bars i{display:block;height:7px;border-radius:5px;background:var(--bg2)}.bars i b{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:30px}.sk h3{font-size:15px;color:var(--mut);margin:0}
+.cn{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}.cn ul{list-style:none;margin:16px 0 0;padding:0;line-height:2}
+footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--mut);font-size:14px}footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:780px){.hero,.ab,.os,.cn{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.chip{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.mq div{animation:none}}
 </style>
 </head>
 <body id="top">
-<nav><div class="wrap"><b>Ramesh Kumar</b><a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#code">Open source</a><a href="#skills">Skills</a><a href="#contact">Contact</a><button id="t" type="button" aria-label="Switch light or dark theme">Theme</button></div></nav>
-
+<nav><div class="w"><a class="logo" href="#top"><i>RK</i>Ramesh Kumar</a><a class="l" href="#about">About</a><a class="l" href="#experience">Experience</a><a class="l" href="#projects">Work</a><a class="l" href="#open-source">Open Source</a><a class="l" href="#skills">Skills</a><a class="l" href="#contact">Contact</a><button class="btn" id="th" type="button" aria-label="Switch light or dark theme">Theme</button></div></nav>
 <main>
-<div class="wrap hero">
+<div class="w hero">
 <div>
-<h1>I build iOS apps that millions of travellers rely on.</h1>
-<p>Senior iOS engineer and team lead with 9+ years in Swift, SwiftUI and UIKit. I’ve shipped 10+ apps across travel, e-commerce and fintech, from first commit to the App Store.</p>
-<a class="btn p" href="#work">See my work</a><a class="btn s" href="#contact">Get in touch</a>
+<span class="badge">Open to senior iOS opportunities</span>
+<h1>Hi, I’m <span>Ramesh Kumar.</span></h1>
+<p class="code mono"><b>let</b> role <em>=</em> "Senior iOS Engineer"</p>
+<p class="d">I design and ship fast, reliable iOS apps — from <strong>travel booking</strong> and <strong>payments</strong> to <strong>streaming</strong>. 9+ years, 10+ apps, and teams I’ve led through sprints, reviews and releases.</p>
+<a class="btn p" href="#projects">Explore my work</a><a class="btn" href="#contact">Get in touch</a>
+<div class="soc"><a href="https://github.com/rameshkmmmec">github.com/rameshkmmmec</a><a href="https://www.linkedin.com/in/ramesh-kumar-94119651">LinkedIn</a><span>Noida, India · IST</span></div>
+<div class="stats"><div><b data-n="9">0</b><span>Years building</span></div><div><b data-n="10">0</b><span>Apps delivered</span></div><div><b data-n="7">0</b><span>Payment SDKs integrated</span></div><div><b data-n="3">0</b><span>Companies</span></div></div>
 </div>
-<aside class="pass" aria-label="Summary">
-<div class="top"><span>iOS ENGINEER</span><span>9+ YRS</span></div>
-<dl>
-<div><dt>Name</dt><dd>Ramesh Kumar</dd></div>
-<div><dt>Role</dt><dd>Senior / Team Lead</dd></div>
-<div><dt>Base</dt><dd>Noida, India</dd></div>
-<div><dt>Apps shipped</dt><dd>10+</dd></div>
-<div><dt>Main stack</dt><dd>Swift, SwiftUI</dd></div>
-<div><dt>Status</dt><dd>Open to roles</dd></div>
-</dl>
-<div class="stub">Last role: EaseMyTrip, 2021 to 2025</div>
-</aside>
+<aside class="pcard"><div class="avatar" aria-hidden="true">RK</div><span class="chip" style="top:-12px;right:22px">Swift</span><span class="chip" style="top:46%;left:-16px">SwiftUI</span><span class="chip" style="bottom:90px;right:-12px">VIPER</span>
+<h3>Senior iOS Engineer</h3><p>Travel · E-commerce · Fintech</p>
+<div class="cur"><small>Currently building</small><b>SkyPulse-SwiftUI</b><small>Travel booking · SwiftUI + Combine</small></div></aside>
 </div>
+<div class="mq" aria-hidden="true"><div><span>Swift <i>◆</i></span><span>SwiftUI <i>◆</i></span><span>UIKit <i>◆</i></span><span>Objective-C <i>◆</i></span><span>Combine <i>◆</i></span><span>Swift Concurrency <i>◆</i></span><span>MVVM <i>◆</i></span><span>VIPER <i>◆</i></span><span>Apple Pay <i>◆</i></span><span>Firebase <i>◆</i></span><span>Swift <i>◆</i></span><span>SwiftUI <i>◆</i></span><span>UIKit <i>◆</i></span><span>Objective-C <i>◆</i></span><span>Combine <i>◆</i></span><span>Swift Concurrency <i>◆</i></span><span>MVVM <i>◆</i></span><span>VIPER <i>◆</i></span><span>Apple Pay <i>◆</i></span><span>Firebase <i>◆</i></span></div></div>
 
-<section id="about"><div class="wrap">
-<h2>About</h2>
-<p class="lead">I care about apps that stay fast and stable at high traffic, and about teams that ship calmly.</p>
-<p style="max-width:40em">Most recently I led iOS development on EaseMyTrip, a travel booking app used by millions for flights, hotels and buses. I own features end to end: architecture, payments and analytics integrations, performance, and production releases. Earlier, as Team Lead at Tycho Technologies, I ran sprints, reviews and releases for a small iOS team.</p>
-<div class="grid" style="margin-top:28px">
-<div class="card"><h3>Scalable architecture</h3><p>MVVM, VIPER and dependency injection that keep large codebases easy to change.</p></div>
+<section id="about"><div class="w">
+<div class="sh"><small class="mono">01 About</small><h2>Apps that hold up at scale.</h2></div>
+<div class="ab"><div>
+<p>I care about the details users never notice: quick launches, smooth booking flows, and apps that stay stable when traffic spikes.</p>
+<p>I’m a senior iOS engineer with <strong>9+ years</strong> of experience across travel, e-commerce and fintech. At EaseMyTrip I led iOS development for a booking app used by millions, owning features, payments, performance and releases. Before that I was promoted to Team Lead at Tycho Technologies, running sprints, reviews and releases for the iOS team.</p>
+<blockquote>Good apps feel effortless — every flow, screen and failure state is considered.</blockquote></div>
+<div class="facts"><div><small>Based in</small><b>Noida, India</b></div><div><small>Experience</small><b>9+ years</b></div><div><small>Last role</small><b>EaseMyTrip</b></div><div><small>Education</small><b>B.Tech, CSE</b></div><div><small>Focus</small><b>Travel · Fintech</b></div><div><small>Status</small><b>Open to roles</b></div></div></div>
+<div class="g3">
+<div class="card"><h3>Architecture at scale</h3><p>MVVM, VIPER, SOLID and dependency injection for codebases that stay easy to change.</p></div>
 <div class="card"><h3>Payments and SDKs</h3><p>Apple Pay, Razorpay, Cashfree, PayU, Amazon Pay, Paytm and MinkasuPay in live booking flows.</p></div>
-<div class="card"><h3>Performance and stability</h3><p>Instruments, crash analysis and memory tuning to cut crashes and slow screens.</p></div>
-<div class="card"><h3>Leading and mentoring</h3><p>Code reviews, estimation, sprint planning and coaching developers across projects.</p></div>
-</div>
-</div></section>
+<div class="card"><h3>Performance craft</h3><p>Instruments, memory tuning and crash analysis to keep apps fast and stable.</p></div>
+<div class="card"><h3>Release ownership</h3><p>TestFlight, App Store Connect, AppCenter and GitHub Actions from build to production.</p></div>
+<div class="card"><h3>Analytics and growth</h3><p>Firebase, MoEngage, Netcore, deep linking and push notifications.</p></div>
+<div class="card"><h3>Calm leadership</h3><p>Code reviews, estimation, sprint planning and mentoring across projects.</p></div>
+</div></div></section>
 
-<section id="experience"><div class="wrap">
-<h2>Experience</h2>
-<p class="lead">Three companies, one focus: native iOS at scale.</p>
-<div class="job"><time>Aug 2025 – Present</time><div><h3>Independent iOS projects and upskilling</h3><p class="co">Self-directed</p><ul><li>Building modern iOS apps in public with SwiftUI, Combine and Swift Concurrency (<a href="https://github.com/rameshkmmmec/SkyPulse-SwiftUI">SkyPulse</a>, <a href="https://github.com/rameshkmmmec/PulseCrypto">PulseCrypto</a>) while looking for Senior iOS or iOS Team Lead roles.</li></ul></div></div>
-<div class="job"><time>Aug 2021 – Jul 2025</time><div><h3>Senior Software Engineer</h3><p class="co">Easy Trip Planners (EaseMyTrip), Noida</p><ul><li>Led iOS development of the EaseMyTrip booking app across flights, hotels, bus and more.</li><li>Built with MVVM and VIPER; integrated payments, analytics, deep linking, push notifications and crash monitoring.</li><li>Worked on EMTDesk and EasyDarshan, delivering features and production fixes with Product, Backend, UI/UX and QA.</li><li>Ran code reviews, sprint planning and mentoring to improve stability and release quality.</li></ul><ul class="tags"><li>Swift</li><li>SwiftUI</li><li>MVVM</li><li>VIPER</li><li>Leadership</li></ul></div></div>
-<div class="job"><time>Aug 2016 – May 2021</time><div><h3>Senior Software Engineer, then Team Lead</h3><p class="co">Tycho Technologies, Noida</p><ul><li>Joined as a senior engineer and was promoted to Team Lead, owning delivery, code quality and team coordination.</li><li>Built high-traffic iOS apps with MVC and MVVM, including NeoU and 100MB Cricket.</li><li>Planned sprints, allocated tasks, reviewed code and managed releases.</li></ul><ul class="tags"><li>Swift</li><li>UIKit</li><li>MVC</li><li>MVVM</li></ul></div></div>
-<div class="job"><time>Aug 2015 – Apr 2016</time><div><h3>Software Engineer</h3><p class="co">Limitless Mobility Solutions, Noida</p><ul><li>Built native iOS apps (Pregnancy App, RSD Hostel) in Objective-C with UIKit and REST APIs.</li></ul></div></div>
-</div></section>
+<section id="experience" style="background:var(--bg2)"><div class="w">
+<div class="sh"><small class="mono">02 Experience</small><h2>Years of shipping.</h2><p>Three companies, one focus: native iOS at scale.</p></div>
+<ol class="tl">
+<li><time>Aug 2025 — Present</time><h3>Independent iOS projects and upskilling</h3><p class="co">Self-directed</p><ul class="b"><li>Building modern iOS apps in public with SwiftUI, Combine and Swift Concurrency (<a href="https://github.com/rameshkmmmec/SkyPulse-SwiftUI">SkyPulse</a>, <a href="https://github.com/rameshkmmmec/PulseCrypto">PulseCrypto</a>) while looking for Senior iOS or iOS Team Lead roles.</li></ul></li>
+<li><time>Aug 2021 — Jul 2025</time><h3>Senior Software Engineer — iOS</h3><p class="co">Easy Trip Planners (EaseMyTrip) · Noida, India</p><ul class="b"><li>Led iOS development of the EaseMyTrip booking app across flights, hotels, bus and more.</li><li>Built with MVVM and VIPER; integrated payments, analytics, deep linking, push notifications and crash monitoring.</li><li>Delivered features and production fixes on EMTDesk and EasyDarshan with Product, Backend, UI/UX and QA.</li><li>Ran code reviews, sprint planning and mentoring to improve stability and release quality.</li></ul><ul class="tags"><li>Swift</li><li>SwiftUI</li><li>MVVM</li><li>VIPER</li><li>Leadership</li></ul></li>
+<li><time>Aug 2016 — May 2021</time><h3>Senior Software Engineer, then Team Lead — iOS</h3><p class="co">Tycho Technologies · Noida, India</p><ul class="b"><li>Promoted to Team Lead, owning delivery, code quality and team coordination.</li><li>Built high-traffic iOS apps with MVC and MVVM, including NeoU and 100MB Cricket.</li><li>Planned sprints, allocated tasks, reviewed code and managed releases.</li></ul><ul class="tags"><li>Swift</li><li>UIKit</li><li>MVC</li><li>MVVM</li></ul></li>
+<li><time>Aug 2015 — Apr 2016</time><h3>Software Engineer — iOS</h3><p class="co">Limitless Mobility Solutions · Noida, India</p><ul class="b"><li>Built native iOS apps (Pregnancy App, RSD Hostel) in Objective-C with UIKit and REST APIs.</li></ul></li>
+</ol></div></section>
 
-<section id="work"><div class="wrap">
-<h2>Selected work</h2>
-<p class="lead">Apps on the App Store that I built or led.</p>
-<div class="grid">
-<div class="card"><h3>EaseMyTrip</h3><p>Travel booking for millions of users. I led iOS development, releases and architecture.</p><ul class="tags"><li>Travel</li><li>MVVM</li><li>VIPER</li><li>Payments</li></ul></div>
-<div class="card"><h3>EMTDesk</h3><p>Corporate travel management with business workflows, authentication and API integrations.</p><ul class="tags"><li>Corporate</li><li>SwiftUI</li><li>UIKit</li></ul></div>
-<div class="card"><h3>EasyDarshan</h3><p>Religious and spiritual travel platform with reusable SwiftUI components and navigation flows.</p><ul class="tags"><li>Travel</li><li>SwiftUI</li></ul></div>
-<div class="card"><h3>NeoU</h3><p>Fitness streaming app with live and on-demand workouts.</p><ul class="tags"><li>Streaming</li><li>Fitness</li></ul></div>
-<div class="card"><h3>100MB Cricket</h3><p>Fan-engagement app with live scores, news and videos.</p><ul class="tags"><li>Sports</li><li>Swift</li><li>UIKit</li></ul></div>
-</div>
-</div></section>
+<section id="projects"><div class="w">
+<div class="sh"><small class="mono">03 Selected work</small><h2>Apps people rely on.</h2><p>Travel, streaming and sports apps on the App Store, with my role in each.</p></div>
+<div class="fl" role="group" aria-label="Filter projects"><button type="button" data-f="all" aria-pressed="true">All work</button><button type="button" data-f="travel" aria-pressed="false">Travel</button><button type="button" data-f="media" aria-pressed="false">Media &amp; Sports</button><span style="align-self:center;color:var(--mut);font-size:14px">5 projects</span></div>
+<div class="g3" id="pj">
+<div class="card" data-c="travel"><span class="cat">Travel</span><h3>EaseMyTrip</h3><p>Travel booking for millions of users. I led iOS development, architecture and releases.</p><ul class="tags"><li>MVVM</li><li>VIPER</li><li>Payments</li></ul></div>
+<div class="card" data-c="travel"><span class="cat">Travel · Corporate</span><h3>EMTDesk</h3><p>Corporate travel management with business workflows, authentication and API integrations.</p><ul class="tags"><li>SwiftUI</li><li>UIKit</li></ul></div>
+<div class="card" data-c="travel"><span class="cat">Travel</span><h3>EasyDarshan</h3><p>Spiritual travel platform with reusable SwiftUI components and navigation flows.</p><ul class="tags"><li>SwiftUI</li><li>REST</li></ul></div>
+<div class="card" data-c="media"><span class="cat">Media</span><h3>NeoU</h3><p>Fitness streaming app with live and on-demand workouts.</p><ul class="tags"><li>Streaming</li><li>APIs</li></ul></div>
+<div class="card" data-c="media"><span class="cat">Sports</span><h3>100MB Cricket</h3><p>Fan-engagement app with live scores, news and videos.</p><ul class="tags"><li>Swift</li><li>UIKit</li></ul></div>
+</div></div></section>
 
-<section id="code"><div class="wrap">
-<h2>Open source</h2>
-<p class="lead">Side projects where I try modern patterns in public.</p>
-<div class="grid">
-<div class="card"><h3><a href="https://github.com/rameshkmmmec/SkyPulse-SwiftUI">SkyPulse-SwiftUI</a></h3><p>A travel booking app built with SwiftUI, Combine and clean MVVM architecture.</p><ul class="tags"><li>Swift</li><li>SwiftUI</li><li>Combine</li></ul></div>
-<div class="card"><h3><a href="https://github.com/rameshkmmmec/PulseCrypto">PulseCrypto</a></h3><p>A real-time cryptocurrency portfolio tracker and market analytics app in programmatic UIKit.</p><ul class="tags"><li>Swift</li><li>UIKit</li><li>Reactive</li></ul></div>
-</div>
-</div></section>
+<section id="open-source" style="background:var(--bg2)"><div class="w">
+<div class="sh"><small class="mono">04 Open source</small><h2>Learning in public.</h2><p>Side projects where I try modern iOS patterns and share the code.</p></div>
+<div class="os"><aside class="gh"><div class="avatar" aria-hidden="true">RK</div><h3 style="margin:12px 0 0">rameshkmmmec</h3><p style="margin:0;color:var(--mut)">Swift · SwiftUI · UIKit</p>
+<div class="gn"><div><b>3</b><span>Public repositories</span></div><div><b>2</b><span>iOS app projects</span></div></div>
+<a class="btn" href="https://github.com/rameshkmmmec">Follow on GitHub</a></aside>
+<div class="g3" style="align-content:start">
+<a class="card" style="text-decoration:none;color:inherit" href="https://github.com/rameshkmmmec/SkyPulse-SwiftUI"><h3>SkyPulse-SwiftUI</h3><p>A modern travel booking app with SwiftUI, Combine and clean MVVM architecture.</p><ul class="tags"><li>Swift</li></ul></a>
+<a class="card" style="text-decoration:none;color:inherit" href="https://github.com/rameshkmmmec/PulseCrypto"><h3>PulseCrypto</h3><p>A real-time crypto portfolio tracker and market analytics app in programmatic UIKit.</p><ul class="tags"><li>Swift</li></ul></a>
+<a class="card" style="text-decoration:none;color:inherit" href="https://github.com/rameshkmmmec/portfolio"><h3>portfolio</h3><p>The source of this portfolio website.</p><ul class="tags"><li>HTML</li></ul></a>
+</div></div></div></section>
 
-<section id="skills"><div class="wrap">
-<h2>Skills</h2>
-<p class="lead">The tools I reach for in daily iOS work.</p>
-<div class="skills">
-<div><h3>Languages and frameworks</h3><ul class="tags"><li>Swift</li><li>Objective-C</li><li>UIKit</li><li>SwiftUI</li><li>Combine</li><li>Swift Concurrency</li><li>Core Data</li><li>AVFoundation</li></ul></div>
+<section id="skills"><div class="w">
+<div class="sh"><small class="mono">05 Toolkit</small><h2>Deep iOS, full craft.</h2><p>The frameworks, patterns and tools I use to turn a product idea into a dependable app.</p></div>
+<div class="bars" style="max-width:640px">
+<div><p><span>Swift / SwiftUI</span><span>90%</span></p><i><b style="width:90%"></b></i></div>
+<div><p><span>UIKit</span><span>92%</span></p><i><b style="width:92%"></b></i></div>
+<div><p><span>Objective-C</span><span>75%</span></p><i><b style="width:75%"></b></i></div>
+<div><p><span>Architecture &amp; patterns</span><span>88%</span></p><i><b style="width:88%"></b></i></div>
+<div><p><span>Payments &amp; SDK integrations</span><span>90%</span></p><i><b style="width:90%"></b></i></div></div>
+<div class="sk">
+<div><h3>Languages</h3><ul class="tags"><li>Swift</li><li>Objective-C</li></ul></div>
+<div><h3>Frameworks</h3><ul class="tags"><li>SwiftUI</li><li>UIKit</li><li>Combine</li><li>Swift Concurrency</li><li>Core Data</li><li>AVFoundation</li></ul></div>
 <div><h3>Architecture</h3><ul class="tags"><li>MVC</li><li>MVVM</li><li>VIPER</li><li>SOLID</li><li>Dependency Injection</li></ul></div>
-<div><h3>Networking</h3><ul class="tags"><li>URLSession</li><li>Alamofire</li><li>REST APIs</li><li>Deep Linking</li></ul></div>
-<div><h3>Quality and delivery</h3><ul class="tags"><li>XCTest</li><li>XCUITest</li><li>Instruments</li><li>GitHub Actions</li><li>TestFlight</li><li>AppCenter</li></ul></div>
-<div><h3>Integrations</h3><ul class="tags"><li>Firebase</li><li>MoEngage</li><li>Netcore</li><li>Apple Pay</li><li>Razorpay</li><li>Cashfree</li><li>PayU</li><li>Paytm</li></ul></div>
-<div><h3>Education</h3><p style="margin:0">B.Tech, Computer Science and Engineering<br>Madan Mohan Malaviya University of Technology, Gorakhpur</p></div>
+<div><h3>Networking</h3><ul class="tags"><li>URLSession</li><li>Alamofire</li><li>REST APIs</li><li>JSON</li><li>Deep Linking</li></ul></div>
+<div><h3>Integrations</h3><ul class="tags"><li>Firebase</li><li>MoEngage</li><li>Netcore</li><li>Apple Pay</li><li>Razorpay</li><li>Cashfree</li><li>PayU</li><li>Amazon Pay</li><li>Paytm</li><li>MinkasuPay</li></ul></div>
+<div><h3>Tools &amp; delivery</h3><ul class="tags"><li>Xcode</li><li>Git</li><li>GitHub Actions</li><li>SPM</li><li>CocoaPods</li><li>XCTest</li><li>XCUITest</li><li>TestFlight</li><li>Instruments</li></ul></div>
 </div>
+<div class="card" style="margin-top:34px"><small class="mono" style="color:var(--acc)">Education</small><h3 style="margin-top:6px">B.Tech, Computer Science &amp; Engineering</h3><p>Madan Mohan Malaviya University of Technology · Gorakhpur, India</p></div>
 </div></section>
 
-<section id="contact"><div class="wrap contact">
-<h2>Contact</h2>
-<p class="lead">I’m looking for Senior iOS Developer and iOS Team Lead roles. Send me a message.</p>
-<p><a href="mailto:rameshkmmmec@gmail.com">rameshkmmmec@gmail.com</a></p>
-<p><a class="btn s" href="https://www.linkedin.com/in/ramesh-kumar-94119651">LinkedIn</a><a class="btn s" href="https://github.com/rameshkmmmec">GitHub</a></p>
+<section id="contact" style="background:var(--bg2)"><div class="w">
+<div class="sh"><small class="mono">06 Contact</small><h2>Let’s build something worth shipping.</h2><p>I’m open to Senior iOS Developer and iOS Team Lead roles. Tell me what you’re building.</p></div>
+<div class="cn"><div class="card"><a class="btn p" href="mailto:rameshkmmmec@gmail.com">Start a conversation</a><button class="btn" id="cp" type="button">Copy email</button>
+<ul><li>rameshkmmmec@gmail.com</li><li><a href="https://www.linkedin.com/in/ramesh-kumar-94119651">linkedin.com/in/ramesh-kumar-94119651</a></li><li><a href="https://github.com/rameshkmmmec">github.com/rameshkmmmec</a></li><li>Noida, India</li></ul></div>
+<div class="card"><span class="badge">Available for senior iOS roles</span><h3 style="margin-top:14px">Prefer the formal version?</h3><p>Ask me for my latest resume by email.</p></div></div>
 </div></section>
 </main>
-<footer><div class="wrap">© 2026 Ramesh Kumar. Noida, India.</div></footer>
+<footer><div class="w"><span>© 2026 Ramesh Kumar. Built with care.</span><span><a href="https://github.com/rameshkmmmec">GitHub</a> · <a href="https://www.linkedin.com/in/ramesh-kumar-94119651">LinkedIn</a></span></div></footer>
 <script>
-(function(){var r=document.documentElement,b=document.getElementById('t');
-b.addEventListener('click',function(){var d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
-r.setAttribute('data-theme',d==='dark'?'light':'dark');});})();
+(function(){var r=document.documentElement;
+document.getElementById('th').addEventListener('click',function(){r.setAttribute('data-theme',r.getAttribute('data-theme')==='dark'?'light':'dark')});
+var cp=document.getElementById('cp');cp.addEventListener('click',function(){try{navigator.clipboard.writeText('rameshkmmmec@gmail.com').then(function(){cp.textContent='Copied'},function(){cp.textContent='rameshkmmmec@gmail.com'})}catch(e){cp.textContent='rameshkmmmec@gmail.com'}});
+var fb=document.querySelectorAll('.fl button'),cs=document.querySelectorAll('#pj .card');
+fb.forEach(function(b){b.addEventListener('click',function(){fb.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');var f=b.dataset.f;cs.forEach(function(c){c.style.display=(f==='all'||c.dataset.c===f)?'':'none'})})});
+var ns=document.querySelectorAll('[data-n]');function run(e){var t=+e.dataset.n,i=0,s=setInterval(function(){i++;e.textContent=Math.round(t*i/20)+'+';if(i>=20)clearInterval(s)},40)}
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){var o=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){run(x.target);o.unobserve(x.target)}})});ns.forEach(function(n){o.observe(n)})}else{ns.forEach(function(n){n.textContent=n.dataset.n+'+'})}
+})();
 </script>
 </body>
 </html>
